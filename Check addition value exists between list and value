@@ -1,0 +1,31 @@
+# Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+# For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
+
+# Test cases:
+#     1.empty list
+#     2.normal list
+
+# pseudocode
+
+# run through the list recursively; add the elements and compare to k; stop when element index is 0
+def trueadder(x, X):
+    if len(X) == 0 or len(X) == 1:
+        print("False")
+        return False
+    else:
+        for i in range(1,len(X)):
+            z = X[i] + X[0]
+            print(z)
+            if z == x:
+                print("True")
+                return True
+                
+        trueadder(x,X[1:])    
+            
+
+# initialize list, k
+thislist = [3, 15, 10, 7]
+k = 12
+
+trueadder(k, thislist)
+    
