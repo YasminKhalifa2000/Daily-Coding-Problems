@@ -1,0 +1,50 @@
+# Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
+# For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
+
+# Test cases:
+#     1.empty list/array
+#     2.normal list
+
+# pseudocode
+
+# run through the list recursively; multiply the elements excpet that of i
+
+# Method 1 using Division
+import numpy
+
+def multiplylist(X):
+    a = new_list = []
+    if len(X) == 0 or len(X) == 1:
+        print("False")
+        return False
+    else:
+        for i in range(len(X)):
+            a.append( (int) (numpy.prod(X) / X[i]) )
+            #print(a)
+            
+        return a
+
+# initialize list
+thislist = [3, 2, 1]
+
+print(multiplylist(thislist))
+
+# Method 2 not using Division; Using the method of list slicing
+import numpy
+
+def multiplylist(X):
+    a = new_list = []
+    if len(X) == 0 or len(X) == 1:
+        print("False")
+        return False
+    else:
+        for i in range(len(X)):
+            a.append( (int) ( numpy.prod(X[0:i]) * numpy.prod(X[i+1:len(X)]) ) )
+            #print(a)
+            
+        return a
+
+# initialize list
+thislist = [3, 2, 1]
+
+print(multiplylist(thislist))
