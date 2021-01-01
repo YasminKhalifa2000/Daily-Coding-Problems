@@ -1,0 +1,25 @@
+# Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
+# For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3.
+
+
+# Test cases:
+#     1.empty list
+#     2.normal list
+
+# pseudocode
+
+def function(X):
+    x = 0
+    for i in range(len(X)):
+        if X[i] == 1:
+            x = 1
+            break
+        if X[i] > 0:
+            
+            
+            
+
+initialize list
+thislist = [1, 2, 0]
+# [3, 15, 10, 7]
+print(function(thislist))
