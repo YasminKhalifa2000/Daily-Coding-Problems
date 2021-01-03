@@ -1,0 +1,42 @@
+# Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
+# For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
+# You can assume that the messages are decodable. For example, '001' is not allowed.
+
+# Map the alpahpet to the numbers
+# find the different iterations of the code 
+# re-assign the alphapet to the numbers
+# ex. 111 can be viewd as 1,11 11, 1 1,1,1
+# ex. 327 can be viwed as 3,27(eliminated) 32,7(eliminated)
+# 3,2,7
+
+
+from string import ascii_lowercase
+
+
+
+def divider(X):
+     
+    if len(X) <= 1:
+        return X
+    else:
+        list_X = []
+        for i in list(X):  
+            print (i) 
+  
+  
+                    
+def decode(X):
+    LETTERS = { str(index): letter for index, letter in enumerate(ascii_lowercase, start=1)} 
+    print(LETTERS)
+    
+    # x = divider(X) 
+    
+    text = []
+
+    text = [LETTERS[character] for character in X if character in LETTERS]
+     
+    print(text)
+    
+   
+message = "111"
+decode(message)
